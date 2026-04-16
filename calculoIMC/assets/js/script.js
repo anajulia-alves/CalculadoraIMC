@@ -3,11 +3,11 @@
 
 const form = document.querySelector('#form');
 
-form.addEventListener('submit', function(e){
+form.addEventListener('submit', function(event){
     event.preventDefault()
     //pega os valores dos inputs
-    const inputPeso = e.target.querySelector('#peso'); // dispara um evento - clique, digitação ou input
-    const inputAltura = e.target.querySelector('#altura');
+    const inputPeso = event.target.querySelector('#peso'); // dispara um evento - clique, digitação ou input
+    const inputAltura = event.target.querySelector('#altura');
 
     const peso = Number(inputPeso.value)
     const altura = Number(inputAltura.value)
