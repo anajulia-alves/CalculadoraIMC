@@ -12,11 +12,13 @@ form.addEventListener('submit', function(event){
     const peso = Number(inputPeso.value)
     const altura = Number(inputAltura.value)
 
-    if(!peso){
+    if(!peso && !altura){
+        setResultado('Peso e altura inválidos', false)
+        return;
+    }else if(!peso){
         setResultado('Peso inválido', false);
         return;
-    }
-    if(!altura){
+    }else if(!altura){
         setResultado('Altura inválida', false);
         return;
     }
